@@ -16,7 +16,7 @@ for change in changes:
     visited = []
     while True:
         if i in visited:
-            print(f'changing instruction[{change}] does not work')
+            #print(f'changing instruction[{change}] does not work')
             break
 
         instruction = instructions[i]
