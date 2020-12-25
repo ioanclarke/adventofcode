@@ -1,4 +1,7 @@
-
+"""
+This is an abomination and contains many horrible, dreadful, awful lines of code.
+READERS, BEWARE!
+"""
 import copy
 def find_edges(tile_image):
     tile_lines = tile_image.split('\n')
