@@ -24,23 +24,23 @@ for tile in data:
 
 corners = []
 for tile in tiles:
-    #print(f'tile: {tile}\t{tiles[tile]}')
+    # print(f'tile: {tile}\t{tiles[tile]}')
     unmatched = 0
     edges = tiles[tile]
     for edge in edges:
         edge_reverse = ''.join(list(reversed(edge)))
-        #print(f'edge: {edge}\t{edge_reverse}')
+        # print(f'edge: {edge}\t{edge_reverse}')
         match = False
         for check_tile in tiles:
             if check_tile == tile:
                 continue
             else:
-                #print(f'\tchecking {check_tile}: {tiles[check_tile]}')
+                # print(f'\tchecking {check_tile}: {tiles[check_tile]}')
                 if edge in tiles[check_tile] or edge_reverse in tiles[check_tile]:
-                    #print(f'\tfound {edge} in {check_tile}, {tiles[check_tile]}')
+                    # print(f'\tfound {edge} in {check_tile}, {tiles[check_tile]}')
                     match = True
                     break
-        if match == False:
+        if not match:
             unmatched += 1
     if unmatched == 2:
         corners.append(tile)
